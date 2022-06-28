@@ -14,7 +14,7 @@ warnings.filterwarnings('ignore')
 
 
 def loadVirtualTifSeq(pathname, order = 'xyz', isPrint = True):
-    tifNames = sorted(glob(pathname), key=alphanumeric_key)
+    tifNames = sorted(glob(pathname, recursive = True), key=alphanumeric_key)
 
     sample = imread(tifNames[0])
 
